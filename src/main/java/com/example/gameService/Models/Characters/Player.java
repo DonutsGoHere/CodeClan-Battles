@@ -19,24 +19,29 @@ public class Player {
     private int maxHealth;
 
     @Column
-    private int exp;
+    private String characterClass;
 
     @Column
-    private int level;
+    private int exp = 0;
+
+    @Column
+    private int level = 1;
 
     @ManyToOne
     @JoinColumn(name = "weapon_id")
     private Weapon weapon;
 
-    public Player(String name, int maxHealth, int exp, int level, Weapon weapon) {
+    public Player(String name, int maxHealth, String characterClass, int exp, int level, Weapon weapon) {
         this.name = name;
         this.maxHealth = maxHealth;
+        this.characterClass = characterClass;
         this.exp = exp;
         this.level = level;
         this.weapon = weapon;
     }
 
-    private Player() {}
+    public Player() {
+    }
 
     public Long getId() {
         return id;
@@ -84,5 +89,13 @@ public class Player {
 
     public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
+    }
+
+    public String getCharacterClass() {
+        return characterClass;
+    }
+
+    public void setCharacterClass(String characterClass) {
+        this.characterClass = characterClass;
     }
 }
