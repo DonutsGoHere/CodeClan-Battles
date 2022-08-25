@@ -1,4 +1,4 @@
-export const attack = (attacker) => {
-  const damage = attacker.weapon.weaponDamage;
+export const attack = (selectedCharacter) => {
+  const damage = selectedCharacter.weapon.weaponDamage;
   return damage;
 };
