@@ -53,7 +53,6 @@ export const Main = () => {
 
   return (
     <div className={styles.main}>
-      <p>Main Container</p>
       <Header viewModeClick={viewModeClick}/>
       <hr />
       {/* leaderboard or game container conditionally rendered by button click? yar */}

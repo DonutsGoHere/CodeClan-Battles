@@ -4,7 +4,7 @@ export const Footer=() =>{
 
     return (
         <div className={styles.main}>
-            Footer
+            <p> Designed by The Lads 2022 </p>
         </div>
       )
 }

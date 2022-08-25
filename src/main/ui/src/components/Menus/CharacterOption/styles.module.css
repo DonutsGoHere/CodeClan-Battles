@@ -2,7 +2,8 @@
   border: 1px black dashed;
   padding: 1rem;
   text-align: center;
-  margin: 1rem
+  margin: 1rem;
+  background-color: antiquewhite;
 }
 .CharacterImage{
   height: 200px;

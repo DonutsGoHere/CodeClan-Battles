@@ -1,5 +1,6 @@
 .main{
   border: 1px black solid;
-  padding: 1rem;
+  /* padding: 1rem; */
   text-align: center;
+  background-color: rgb(47, 47, 51)
 }
