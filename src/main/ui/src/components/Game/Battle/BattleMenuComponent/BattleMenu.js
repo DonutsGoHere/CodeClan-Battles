@@ -5,6 +5,7 @@ import { GiPointySword, GiHealthPotion } from 'react-icons/gi'
 export const BattleMenu = ({onAttack, onPotion}) => {
     return (
       <div className={styles.main}>
+
         <div onClick={onAttack} className={styles.menuButton}>
           {/* <img className={styles.image} src='sword-8bit.png' alt='Sword Attack Button'/> */}
           <GiPointySword className={styles.image} />
