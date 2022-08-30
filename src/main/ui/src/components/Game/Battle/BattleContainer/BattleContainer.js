@@ -70,12 +70,17 @@ export const BattleContainer = ({selectedCharacter, selectedEncounter, gameData,
                 <BattleAnimation characterImage={characterAnimation} enemyImage={enemyAnimation} />
               </div>
 
+
+              <BattleAnimation characterImage ={characterAnimation} character={selectedCharacter} 
+                  enemyImage={enemyAnimation} enemy={selectedEncounter.enemy}/>
+
               {/* Player health bar */}
                 <div className={styles.player}>
                   <Character 
                     character={selectedCharacter} health={characterHealth}
                   />
                 </div>
+
 
             {/* battle menu */}
             <div className={styles.menu}>

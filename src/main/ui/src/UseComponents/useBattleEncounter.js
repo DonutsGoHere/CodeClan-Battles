@@ -5,17 +5,21 @@ import { attack, potion } from "SharedComponents/battleFunctions";
 
 
 
-export const useBattleEncounter = ( encounter, character, enemy ) => {
+export const useBattleEncounter = ( encounter ) => {
+  let type = "";
+  character.name === "Kevin"? type = "Warrior" : type ="Dwarf";
+
+
   const [turn, setTurn] = useState(0);
   const [inEncounter, setInEncounter] = useState(false);
   const [characterHealth, setCharacterHealth] = useState(character.maxHealth);
   const [enemyHealth, setEnemyHealth] =  useState(enemy.maxHealth);
   const [narratorScript, setNarratorScript] = useState('');
   const [enemyAnimation, setEnemyAnimation] =useState("./Images/MinotaurIdle.png");
-  const [characterAnimation, setCharacterAnimation] = useState("./Images/WarriorIdle.png")
-  // animations here
-  // characterAnimation
-  // enemy Animation
+  const [characterAnimation, setCharacterAnimation] = useState('./Images/'+type+'Idle.png')
+
+  
+
 
   useEffect (() => {
     const { battleMode, turn } = encounter;
@@ -35,7 +39,7 @@ export const useBattleEncounter = ( encounter, character, enemy ) => {
             await pause(750);
 
             if(turn ===0){
-              setCharacterAnimation("./Images/WarriorAttack.png");
+              setCharacterAnimation('./Images/'+type+'Attack.png');
               await pause(1000);
               setEnemyAnimation("./Images/MinotaurHurt.png");
               await pause(1000);
@@ -45,7 +49,7 @@ export const useBattleEncounter = ( encounter, character, enemy ) => {
             
               setEnemyAnimation("./Images/MinotaurAttack.png");
               await pause(1000);
-              setCharacterAnimation("./Images/WarriorHurt.png");
+              setCharacterAnimation('./Images/'+type+'Hurt.png');
               await pause(1000);
               setCharacterHealth(h => (h - damage > 0 ? h - damage :0));
 
@@ -65,7 +69,7 @@ export const useBattleEncounter = ( encounter, character, enemy ) => {
 
             await pause(1500);
             setEnemyAnimation("./Images/MinotaurIdle.png")
-            setCharacterAnimation("./Images/WarriorIdle.png")
+            setCharacterAnimation('./Images/'+type+'Idle.png')
 
             console.log("step3")
             setNarratorScript(`${defender.name} responds!`);
