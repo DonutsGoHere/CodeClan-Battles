@@ -1,3 +1,3 @@
 export * from './Pause';
-export * from './battleFunctions'
-export * from './RandomNumber'
+export * from './battleFunctions';
+export * from './RandomNumber';

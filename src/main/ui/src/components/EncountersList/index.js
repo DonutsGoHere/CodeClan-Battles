@@ -1,2 +1,2 @@
 export * from './EncounterOption';
-export * from './EncounterSelect'
+export * from './EncounterSelect';

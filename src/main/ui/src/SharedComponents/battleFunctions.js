@@ -1,4 +1,4 @@
-export const attack = ({fighter}) => {
+export const attack = ({ fighter }) => {
   const damage = fighter.weapon.damage;
 
   return damage;

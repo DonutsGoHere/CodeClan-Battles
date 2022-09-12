@@ -1,6 +1,6 @@
 export const pause = ms =>
-  new Promise(res =>
-    {setTimeout(() => {
+  new Promise(res => {
+    setTimeout(() => {
       res();
-}, ms);
-});
+    }, ms);
+  });
