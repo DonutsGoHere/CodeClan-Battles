@@ -1,15 +1,14 @@
 .main {
-    display: flex;
-    border-radius: 5px;
-    gap: 5px;
-    padding: 5px;
-    /* align-items: center; */
-    background-color: white;
-    border: black solid;
-    scale: 80%;
-    width: 100%;
-  }
-  
+  display: flex;
+  border-radius: 5px;
+  gap: 5px;
+  padding: 5px;
+  background-color: white;
+  border: black solid;
+  scale: 80%;
+  width: 100%;
+}
+
 .label {
   font-size: 1.5rem;
   font-weight: bold;

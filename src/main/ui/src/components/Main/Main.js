@@ -101,12 +101,9 @@ export const Main = () => {
     }
   }, [viewMode]);
 
-  // state for leaderboard or gamecontainer to render either component ??
-
   return (
     <div className={styles.main}>
       <Header viewModeClick={viewModeClick} />
-      {/* leaderboard or game container conditionally rendered by button click? yar */}
       {viewMode === 'characters' && (
         <CharacterSelect
           playersData={playersData}
@@ -165,8 +162,7 @@ export const Main = () => {
             setViewMode('characters');
             setEncountersCounter(0);
             setCompletedEncounters([]);
-          }
-        }
+          }}
         />
       )}
       {viewMode === 'start' && <StartMenu viewModeClick={viewModeClick} />}

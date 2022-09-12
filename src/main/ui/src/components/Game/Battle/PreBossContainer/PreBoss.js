@@ -6,7 +6,8 @@ export const PreBoss = ({ selectedCharacter, onClick }) => {
   return (
     <div className={styles.main}>
       <h3>
-        <StartGameNarrator className={styles.narrator}
+        <StartGameNarrator
+          className={styles.narrator}
           script={
             'Your journey has lead you to the gates of a greater enemy! '
           }
