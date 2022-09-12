@@ -1,0 +1,20 @@
+.main {
+  text-align: center;
+  background-color: black;
+  background-image: url(https://t3.ftcdn.net/jpg/02/96/74/90/360_F_296749091_cBS5tC0ike7Z8UedzPL74nYFRc9Q3rjW.jpg);
+  background-size: cover;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Aboreto, 'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.screen {
+  width: 80%;
+  height: 600px;
+  object-fit: contain;
+}
